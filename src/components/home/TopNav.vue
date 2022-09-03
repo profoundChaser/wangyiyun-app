@@ -1,9 +1,7 @@
 <template>
   <div class="topNav">
     <div class="icon-box">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-caidan"></use>
-      </svg>
+      <i class="iconfont">&#xe790;</i>
     </div>
     <div class="nav">
       <span>我的</span>
@@ -12,9 +10,7 @@
       <span>视频</span>
     </div>
     <div class="icon-box">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-sousuo"></use>
-      </svg>
+      <i class="iconfont">&#xe693;</i>
     </div>
   </div>
 </template>

@@ -1,27 +1,19 @@
 <template>
   <div class="icon-list">
     <div class="icon-box">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-tuijian"></use>
-      </svg>
+      <img src="../../assets/fonts/svg/tuijian.svg" alt="" class="icon">
       <span>每日推荐</span>
     </div>
     <div class="icon-box">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-shipin1"></use>
-      </svg>
+      <img src="../../assets/fonts/svg/shipin.svg" alt="" class="icon">
       <span>私人FM</span>
     </div>
     <div class="icon-box">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-songlist-01"></use>
-      </svg>
+      <img src="../../assets/fonts/svg/gedan.svg" alt="" class="icon">
       <span>歌单</span>
     </div>
     <div class="icon-box">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-paihangbang"></use>
-      </svg>
+      <img src="../../assets/fonts/svg/paihangbang.svg" alt="" class="icon">
       <span>排行榜</span>
     </div>
   </div>
@@ -52,6 +44,7 @@ export default {
     align-items: center;
     .icon {
       width: 1rem;
+      margin-bottom: 10px;
     }
   }
 }

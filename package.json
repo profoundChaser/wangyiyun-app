@@ -9,11 +9,14 @@
   "dependencies": {
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "dayjs": "^1.11.5",
+    "grade-js": "^1.0.10",
     "sass": "^1.54.7",
     "sass-loader": "^13.0.2",
     "vant": "^3.6.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue3-marquee": "^3.1.2",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

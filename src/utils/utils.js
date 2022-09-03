@@ -144,18 +144,36 @@ export const debounce = function (cb, ms) {
   
   export const setStore = function (type, key, val) {
     if (type === 'local') {
-      localStorage.setItem(key, val)
+      if(Array.isArray(val) || (typeof val === 'object')){
+        localStorage.setItem(key, JSON.stringify(val))
+      }else{
+        localStorage.setItem(key, val)
+      }
     } else {
-      sessionStorage.setItem(key, val)
+      if(Array.isArray(val) || (typeof val === 'object')){
+        sessionStorage.setItem(key, JSON.stringify(val))
+      }else{
+        sessionStorage.setItem(key, val)
+      }
     }
   }
   
-  export const getStore = function (type, key) {
+  export const getStore = function (type, key,isStringify) {
+    let res
     if (type === 'local') {
-      localStorage.getItem(key)
+      if(isStringify){
+        res=JSON.parse(localStorage.getItem(key))
+      }else{
+        res=localStorage.getItem(key)
+      }
     } else {
-      sessionStorage.getItem(key)
+      if(isStringify){
+        res=JSON.parse(sessionStorage.getItem(key))
+      }else{
+        res=sessionStorage.getItem(key)
+      }
     }
+    return res
   }
   
   //精确查询

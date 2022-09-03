@@ -2,13 +2,17 @@ import { def } from '@vue/shared'
 import {
     Button,
     Swipe, 
-    SwipeItem 
+    SwipeItem,
+    Popup,
+    Progress
 } from 'vant'
 
 let plugins=[
     Button,
     Swipe, 
-    SwipeItem 
+    SwipeItem,
+    Popup,
+    Progress
 ]
 
 export default function getVant(app){

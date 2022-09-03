@@ -7,14 +7,14 @@
     <div class="music-content">
       <van-swipe :loop="false" :width="150" :show-indicators="false">
         <van-swipe-item v-for="music in state.musicList" :key="music.id" class="auto-define-swipe">
-          <img :src="music.picUrl" alt="歌单图片" />
-          <span class="playCount">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-24gl-play"></use>
-            </svg>
-            {{ changeCount(music.playCount) }}
-          </span>
-          <span class="name">{{ music.name }}</span>
+          <router-link :to="{ path: '/itemMusic', query: { id: music.id } }">
+            <img :src="music.picUrl" alt="歌单图片" />
+            <span class="playCount">
+              <i class="iconfont">&#xea6d;</i>
+              {{ changeCount(music.playCount) }}
+            </span>
+            <span class="name">{{ music.name }}</span>
+          </router-link>
         </van-swipe-item>
       </van-swipe>
     </div>
@@ -31,7 +31,6 @@ export default {
     })
     onMounted(() => {
       getMusicList().then((res) => {
-        console.log(res)
         state.musicList = res.result
       })
     })
@@ -87,12 +86,7 @@ export default {
         top: 7%;
         display: flex;
         color: #fff;
-        .icon {
-          width: 0.4rem;
-          height: 0.4rem;
-          fill: #fff;
-          margin-right: 5px;
-        }
+        align-items: center;
       }
       img {
         width: 100%;
